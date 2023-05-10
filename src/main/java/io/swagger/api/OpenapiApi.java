@@ -52,7 +52,7 @@ public interface OpenapiApi {
     @RequestMapping(value = "/openai/search/restaurant",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<InlineResponse200> openapiSearchRestaurantGet(@Parameter(in = ParameterIn.QUERY, description = "Keyword search (keywords can be separated by space), area and genre information can also be specified" ,schema=@Schema()) @Valid @RequestParam(value = "query", required = false) String query, @Parameter(in = ParameterIn.QUERY, description = "Desired reservation date" ,schema=@Schema()) @Valid @RequestParam(value = "date", required = false) LocalDate date, @Parameter(in = ParameterIn.QUERY, description = "Desired reservation date and time" ,schema=@Schema()) @Valid @RequestParam(value = "datetime", required = false) OffsetDateTime datetime, @Min(1)@Parameter(in = ParameterIn.QUERY, description = "Number of people for the reservation" ,schema=@Schema(allowableValues={ "1" }, minimum="1"
+    ResponseEntity<InlineResponse200> openapiSearchRestaurantGet(@Parameter(in = ParameterIn.QUERY, description = "Keyword search (keywords can be separated by space), area and genre information can also be specified" ,schema=@Schema()) @Valid @RequestParam(value = "query", required = false) String query, @Parameter(in = ParameterIn.QUERY, description = "Desired reservation date, ISO8601", schema=@Schema()) @Valid @RequestParam(value = "datetime", required = false) LocalDate datetime, @Min(1)@Parameter(in = ParameterIn.QUERY, description = "Number of people for the reservation" ,schema=@Schema(allowableValues={ "1" }, minimum="1"
 )) @Valid @RequestParam(value = "person", required = false) Integer person);
 
 }
