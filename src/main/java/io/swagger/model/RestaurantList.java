@@ -2,8 +2,6 @@ package io.swagger.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.InlineResponse200Results;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,27 +10,26 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * InlineResponse200
+ * Restaurant
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-05-10T14:40:17.714141527Z[GMT]")
 
 
-public class InlineResponse200   {
-  @JsonProperty("Results")
+public class RestaurantList {
   @Valid
-  private List<InlineResponse200Results> results = null;
+  private List<Restaurant> restaurantList = null;
 
-  public InlineResponse200 results(List<InlineResponse200Results> results) {
-    this.results = results;
+  public RestaurantList results(List<Restaurant> results) {
+    this.restaurantList = results;
     return this;
   }
 
-  public InlineResponse200 addResultsItem(InlineResponse200Results resultsItem) {
-    if (this.results == null) {
-      this.results = new ArrayList<InlineResponse200Results>();
+  public RestaurantList addResultsItem(Restaurant resultsItem) {
+    if (this.restaurantList == null) {
+      this.restaurantList = new ArrayList<Restaurant>();
     }
-    this.results.add(resultsItem);
+    this.restaurantList.add(resultsItem);
     return this;
   }
 
@@ -42,12 +39,12 @@ public class InlineResponse200   {
    **/
   @Schema(description = "")
       @Valid
-  @Size(max=10)   public List<InlineResponse200Results> getResults() {
-    return results;
+  @Size(max=10)   public List<Restaurant> getRestaurantList() {
+    return restaurantList;
   }
 
-  public void setResults(List<InlineResponse200Results> results) {
-    this.results = results;
+  public void setRestaurantList(List<Restaurant> restaurantList) {
+    this.restaurantList = restaurantList;
   }
 
 
@@ -59,21 +56,21 @@ public class InlineResponse200   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse200 inlineResponse200 = (InlineResponse200) o;
-    return Objects.equals(this.results, inlineResponse200.results);
+    RestaurantList RestaurantList = (RestaurantList) o;
+    return Objects.equals(this.restaurantList, RestaurantList.restaurantList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(results);
+    return Objects.hash(restaurantList);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse200 {\n");
+    sb.append("class Restaurant {\n");
     
-    sb.append("    results: ").append(toIndentedString(results)).append("\n");
+    sb.append("    results: ").append(toIndentedString(restaurantList)).append("\n");
     sb.append("}");
     return sb.toString();
   }

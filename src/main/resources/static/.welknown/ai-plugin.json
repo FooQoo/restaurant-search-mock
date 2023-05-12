@@ -3,7 +3,7 @@
   "name_for_model": "RestaurantSearch",
   "name_for_human": "飲食店検索",
   "description_for_human": "あなたにおすすめの飲食店を提案します。",
-  "description_for_model": "Use the RestaurantSearch plugin to get relevant restaurant suggestions for any meal or researching purpose. The query to be sent should not include stopwords like articles, prepositions and determinants. The api works best when searching for words that are related to restaurants, like their name, area, genre, reservation date or datetime. Links will always be returned and should be shown to the user. You Should request http not https.",
+  "description_for_model": "Use the RestaurantSearch plugin to get relevant restaurant for JSON Format. You Should request http not https.",
   "api": {
     "type": "openapi",
     "url": "http://localhost:8080/api-docs",

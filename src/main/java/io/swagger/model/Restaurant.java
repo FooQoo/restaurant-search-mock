@@ -2,33 +2,28 @@ package io.swagger.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
+
 import javax.validation.constraints.*;
 
 /**
- * InlineResponse200Results
+ * Restaurants
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-05-10T14:40:17.714141527Z[GMT]")
 
 
-public class InlineResponse200Results   {
-  @JsonProperty("Name")
+public class Restaurant {
   private String name = null;
 
-  @JsonProperty("Address")
   private String address = null;
 
-  @JsonProperty("Genre")
   private String genre = null;
 
-  @JsonProperty("Rating")
   private Float rating = null;
 
-  public InlineResponse200Results name(String name) {
+  public Restaurant name(String name) {
     this.name = name;
     return this;
   }
@@ -47,7 +42,7 @@ public class InlineResponse200Results   {
     this.name = name;
   }
 
-  public InlineResponse200Results address(String address) {
+  public Restaurant address(String address) {
     this.address = address;
     return this;
   }
@@ -66,7 +61,7 @@ public class InlineResponse200Results   {
     this.address = address;
   }
 
-  public InlineResponse200Results genre(String genre) {
+  public Restaurant genre(String genre) {
     this.genre = genre;
     return this;
   }
@@ -85,7 +80,7 @@ public class InlineResponse200Results   {
     this.genre = genre;
   }
 
-  public InlineResponse200Results rating(Float rating) {
+  public Restaurant rating(Float rating) {
     this.rating = rating;
     return this;
   }
@@ -115,11 +110,11 @@ public class InlineResponse200Results   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse200Results inlineResponse200Results = (InlineResponse200Results) o;
-    return Objects.equals(this.name, inlineResponse200Results.name) &&
-        Objects.equals(this.address, inlineResponse200Results.address) &&
-        Objects.equals(this.genre, inlineResponse200Results.genre) &&
-        Objects.equals(this.rating, inlineResponse200Results.rating);
+    Restaurant Restaurant = (Restaurant) o;
+    return Objects.equals(this.name, Restaurant.name) &&
+        Objects.equals(this.address, Restaurant.address) &&
+        Objects.equals(this.genre, Restaurant.genre) &&
+        Objects.equals(this.rating, Restaurant.rating);
   }
 
   @Override
@@ -130,7 +125,7 @@ public class InlineResponse200Results   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse200Results {\n");
+    sb.append("class Restaurants {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
